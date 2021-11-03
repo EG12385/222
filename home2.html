@@ -3,64 +3,25 @@
 <head>
 <title>theHIT</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
- <script src="https://kit.fontawesome.com/268d442577.js" crossorigin="anonymous"></script>
- <link rel="stylesheet" href="css/styles3.css">
+<script src="https://kit.fontawesome.com/268d442577.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="css/styles3.css">
   </head>
   <body>
     <div class="page-container">
     <div class="content">
-      <h1><strong>Table of Contents</strong></h1><br>
+
+        <h1><strong>Documentation describes initial configuration of Maintenance Release 75</strong></h1><br>
+      <h1><strong>Training Overview</strong></h1><br>
       <br>
 
-      <h3><u><strong>Name and Enable the Guest and Internal SSIDs</strong></u></h3><br>
-    <p>1.  In Dashboard, navigate to <strong>Wireless > Configure > SSIDs.</strong></p>
-    <p>2.  For the <strong>Name</strong> section of each SSID, click the <strong>rename </strong> link.</p>
-    <p>3.  Enable and rename the Guest and Internal SSIDs appropriately. This is the name of the wireless network that clients will see in their list of available network connections.</p>
-    <p>4.  Click the <strong>Save Changes</strong> button.</p>
-    <p>Configuration Overview:</p>
-    <img src="images/MerakiSSID.JPG"alt="SSIDs"width="1000px" hight="1000px"><br>
-    <br>
-      <h3><u><strong>Configure the 'Guest' SSID</strong></u></h3><br>
-      <p>1. Navigate to <strong>Wireless > Configure > Access control</strong>.</p>
-      <p>2. Select your guest network from the <strong>SSID</strong> drop-down menu.</p>
-      <p>3. For <strong>Association requirements</strong>, choose <strong>Open (no encryption)</strong>.</p>
-      <img src="images/accesscontrol.JPG"alt="SSIDs"width="500px" hight="500px">
-      <p>4. For <strong>Splash page</strong>, choose <strong>None (direct access)</strong>.</p>
-      <p>5. Scroll down to the <strong>Addressing and traffic</strong> section of the page.</p>
-      <p>6. Ensure that <strong>"NAT mode: Use Meraki DHCP"</strong> is selected. In NAT mode, Clients receive IP addresses in an isolated 10.0.0.0/8 network. Clients cannot communicate with each other.</p>
-      <p>7. Click <strong>Save Changes </strong> at the bottom of the page.</p>
-      <p>8. Navigate to the <strong>Configure > Firewall & traffic shaping</strong> page.</p>
-      <p>9. Ensure that the Guest network is selected on the SSID drop-down menu at the top of the page.</p>
-      <p>10.In the <strong>Layer 3</strong> firewall rules section, select Deny from the drop-down menu for the rule labeled <strong>Wireless clients accessing LAN</strong>. More information on this setting is available in Deny Local LAN' settings in Cisco Meraki MR firewall.</p>
-      <img src="images/firewall.JPG"alt="SSIDs"width="500px" hight="500px">
-      <p>11.Scroll down to the Traffic shaping rules section and select a <strong>Per-client</strong> and/or <strong>Per-SSID</strong>bandwidth limit.</p>
-      <p>12.Click <strong>Save Changes</strong>.</p>
-      <img src="images/traficshaping.JPG"alt="SSIDs"width="500px" hight="500px">
 
-      <h3><u><strong>Configure the 'Internal' SSID</strong></u></h3><br><br>
-      <p>1. Navigate to <strong>Configure > Access control</strong>.</p>
-      <p>2. Select your guest network from the <strong>SSID</strong> drop down.</p>
-      <p>3. For <strong>Association requirements</strong>, choose <strong>Pre-shared key with WPA2</strong> and enter a key that Clients will use to connect to the network.</p>
-      <img src="images/access.JPG"alt="SSIDs"width="600px" hight="600px">
-      <p>4. For <strong>Splash page</strong>, choose <strong>None (direct access)</strong></p>
-      <p>5. Scroll down to the <strong>Addressing and traffic</strong> section of the page.</p>
-      <p>6. Select <strong>"Bridge mode: Make clients part of the LAN"</strong>. In Bridge mode, Meraki devices operate transparently (no NAT or DHCP). Clients receive DHCP leases from the LAN or use static IPs</p>
-    <img src="images/addressing.JPG"alt="SSIDs"width="800px" hight="800px">
-      <p>7. Click <strong>Save Changes</strong> at the bottom of the page.</p>
-      <p>8. Navigate to the <strong>Firewall & traffic shaping </strong> page.</p>
-      <p>9. Ensure that the Internal network is selected on the SSID drop-down menu at the top of the page.</p>
-      <p>10.In the <strong>Layer 3 firewall rules</strong> section, make sure <strong>Allow</strong> is selected for the rule labeled <strong>Wireless clients accessing LAN</strong>.</p>
-      <p>11.Click <strong>Save Changes</strong></p>
-      <p>After these steps are complete, the AP's in your network will broadcast two different SSIDs. One network will allow Guest access to the Internet only, the other will allow Internal users to access the network through a secure extension of your wired LAN.</p>
-
-    </div>
     <div class="sidebar-menu">
 
       <header class="logo">
 
         <!--  <span id="logo" class="fa fa-codepen fa-2x"></span>-->
 
-          <img src="images/ICTG.PNG" class="img-responsive" width="220px" hight="180px"alt=""/>
+          <img src="images/ICTG.PNG" class="img-responsive" width="220px" hight="150px"alt=""/>
 
       </header>
 
@@ -72,7 +33,7 @@
             <li><a href="index.html"><i class="fas fa-home"></i><span> Home</span></a></li>
             <li><a href="table.html"><i class="fas fa-list"></i><span> Table of Contents</span></a></li>
             <li><a href="dash.html"><i class="fas fa-table"></i><span> Dashboard</span></a></li>
-            <li><a href="comp.html"><i class="fas fa-user-friends"></i></i><span> My Company</span><span class="fa fa-angle-right" style="float: right"></span></a>
+            <li><a href="comp.html"><i class="fas fa-user-friends"></i><span> My Company</span><span class="fa fa-angle-right" style="float: right"></span></a>
                 <ul>
                     <li><a href="compI.html">Company Info</a></li>
                     <li><a href="compA.html">Access Control</a></li>
@@ -81,9 +42,9 @@
             </li>
             <li><a href="service.html"><i class="fa fa-gears"></i><span> Service Catalog</span><span class="fa fa-angle-right" style="float: right"></span></a>
                 <ul>
-                  <li><a href="serviceT.html">Tariffs</a></li>
-                  <li><a href="serviceP.html">Bundles</a></li>
-                  <li><a href="serviceO.html">Products</a></li>
+                  <li><a href="compI.html">Company Info</a></li>
+                  <li><a href="compA.html">Access Control</a></li>
+                  <li><a href="compT.html">Templates</a></li>
                 </ul>
             </li>
 
@@ -124,10 +85,10 @@
 
 
                 <li><a href="index.html"><i class="fas fa-id-card"></i><span> Contact</span></a></li>
-        </ul>
-        </div>
-      </div>
-    </div>
+          </ul>
+          </div>
+          </div>
+          </div>
 
 
 
