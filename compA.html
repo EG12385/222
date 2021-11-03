@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>theHIT</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/268d442577.js" crossorigin="anonymous"></script>
+ <link rel="stylesheet" href="css/styles3.css">
+  </head>
+  <body>
+    <div class="page-container">
+    <div class="content">
+      <h1><strong>Access Control</strong></h1><br>
+      <br>
+
+      <h3><u><strong>Adding Users</strong></u></h3>
+      <p><i>It is not recommended to use the default Root user, for any operation other than initial setup.</i></p>
+      <br>
+        <p>1.  Left on the navigation menu, select <strong>My comapny</strong>, then <strong>Access control</strong>, and click <strong>Users</strong>.</p>
+       <img src="images/acc1.PNG"alt="SSIDs"width="320px" hight="280px">
+       <br><br>
+
+
+      <p>2. <strong>Create user</strong> panel, is used to fill in the following user details:</p>
+      <ul>
+        <li><strong>Login </strong>- Type the username that will be used by this user when they log in to the admin interface.</li>
+        <li><strong>Email </strong>- The email contact to be used for this user.  The user will recieve notifications for which they are subscribed via this email.</li>
+        <li><strong>Password </strong>- Type the password for this user, or create a password using the 'Generate Password' option provided. It should be noted that upon first login to the interface the user will be prompted to change their password.</li>
+        <li><strong>Role</strong>- Select the roll applied for this user.</li>
+      </ul><br>
+
+      <p>3.   Once all the user information was updated, select <strong>Save</strong>.</p>
+      <img src="images/comp5.PNG"alt="SSIDs"width="80px" hight="30px">
+      <br><br>
+
+
+      <h3><u><strong>Access Levels and  Roles</strong></u></h3><br>
+      <img src="images/acc2.PNG"alt="SSIDs"width="680px" hight="580px">
+
+      <h3><strong>Access Levels</strong></h3>
+
+      <p>Access Levels are available from the old user interface, and can be accessed on the left panel, next to 'Dashboard'.   Different type of users will have different responsibilities within the billing system.  In some cases certain portions of the system needs to be restricted for users to see.
+      Roles allow the administrator to decide what a user, for example, can see and edit, or create.  You can use default ACLs defined in PortaBilling, or create new ones to fit your needs.</p>
+
+
+
+      <h3><strong>Access Level Types</strong></h3>
+
+      <p>An access level conisists of the followng types:</p>
+      <ul>
+        <li><strong>Account </strong>- to be applied to your account</li>
+      <li><strong>CC Staff </strong>- to be applied to your customer care support employees</li>
+      <li><strong>Component </strong>- cannot be assigned to users; used only to construct other access levels</li>
+      <li><strong>Customer </strong>- applied to retail customers or subcustomers</li>
+      <li><strong>Distributor </strong>- applied to your distributor</li>
+      <li><strong>Representative </strong>- applied to your representative</li>
+      <li><strong>Reseller </strong>- applied to your resellers</li>
+      <li><strong>User </strong>- access level for users of the admin interface</li>
+      <li><strong>Vendor </strong>- applied to your vendors</li>
+      </ul><br>
+
+      <h3><strong>Add / Edit a new user ACL</strong></h3>
+
+  <p>Should you find that a predefined user ACL offer too many, or too few restrictions for a class of user, you might have to create a new user ACL. The easiest method to create a new access level, is to take an existing access levle and modify it according to need.
+  Each model access level, are granted certain permissions which should be examined when creating a new access level model. Creating a new access level:</p>
+<p>1.   On the <strong>Access Level Management </strong>page, click <strong>Add</strong>.</p>
+<p>2.   On the <strong>New Access Level </strong>page, specify the following information:</p>
+<ul>
+  <li><strong>Name </strong>- Type the custom name for this ACL</li>
+  <li><strong>Type </strong>- Select the entity this ACL will be applied to</li>
+<li><strong>Componets </strong>tab - Define the components that will be included in this ACL, and in which order by using the <strong>Include</strong>, <strong>Remove</strong>, <strong>Up </strong>and <strong>Down </strong>buttons.</li>
+</ul>
+<p><i>Note: Each access level may have zero or more dependent components, which are ordered and applied in order until the first matching permission is reached. The sequence of components matching is held top-down:</i></p>
+<img src="images/acc3.PNG"alt="SSIDs"width="880px" hight="780px">
+
+<br>
+<br>
+
+<h3><strong>Role-based access control</strong></h3>
+
+<p>An administrators can use the role-based security system to control user access, along with the ACL security system, ensuring that a user can only access those resources authorized to see or use.</p>
+<p>Accessible from the new GUI, the role-based security system exists in parralel with the ACL one.</p>
+<br>
+<img src="images/acc5.PNG"alt="SSIDs"width="880px" hight="780px">
+<br><br>
+<h3><strong>Roles</strong></h3>
+
+<p>Default roles are supplied, or new roles can be created by administrators:</p>
+<ul>
+  <li><strong>Account </strong>- to be applied to your account</li>
+<li><strong>CC Staff </strong>- to be applied to your customer care support employees</li>
+<li><strong>Component </strong>- cannot be assigned to users; used only to construct other access levels</li>
+<li><strong>Customer </strong>- applied to retail customers or subcustomers</li>
+<li><strong>Distributor </strong>- applied to your distributor</li>
+<li><strong>Representative </strong>- applied to your representative</li>
+<li><strong>Reseller </strong>- applied to your resellers</li>
+<li><strong>Admin </strong>- access level for users of the admin interface</li>
+<li><strong>Vendor </strong>- applied to your vendors</li>
+</ul><br>
+
+<p><i>Admin, Account and Customer role types are available. Support for other role types will be implemented in subsequent releases.</i></p>
+<p>As a resource tree presented on the webinterface, roles are presented as root nodes reflecting entities. Second-level nodes reflect entity parameter panels.</p>
+<p>For each node within the tree, administrator assigns permissions to define whether an entity or its parameters are available for the user and which actions the user can perform on them.
+The role’s resource tree has a hierarchical structure, that is, lower-level nodes inherit permissions that have been assigned to higher-level nodes.</p>
+
+  <h3><strong>Create a role</strong></h3>
+<p>Should certain items on an entity parameter panel be hiden, switch to Advance mode, the role's resource tree will display a list of itmes for each entity parameter panel, whereby the administrator can set the required permission for the corresponding item.</p>
+<img src="images/acc4.PNG"alt="SSIDs"width="880px" hight="780px">
+<br>
+<br>
+
+<h3><strong>Permissions</strong></h3>
+
+<p>One of the following permissions in the role's resource tree can be assigned:</p>
+<ul>
+  <li><strong>Restrict </strong>- The user cannot access the specified resource</li>
+  <li><strong>Read </strong>- Permits users to view the specified resource</li>
+  <li><strong>Modify </strong>- Permits users to view, update, create and delete the specified resource</li>
+</ul>
+<br>
+<p>If a users attempts tp perform an action with a resource, the system will first check whether the user has permission to perform this action.  If the permission is granted the user may proceed, otherwise, the action will not be permitted.</p>
+<br>
+<br>
+<br><br>
+<p>More about Adding Users, can be viewed <a href="https://www.portaone.com/handbook/MR75/Initial_Configuration/PortaSwitch_Initial_Configuration/PortaSwitch_Initial_Configuration.htm#Add_users"> <strong>here</strong>.</a></p>
+
+
+
+
+    <div class="sidebar-menu">
+
+      <header class="logo">
+
+
+          <img src="images/ICTG.PNG" class="img-responsive" width="220px" hight="150px"alt=""/>
+
+      </header>
+
+      <div style="border-top:1px solid rgba(69, 74, 84, 0.7)"></div>
+
+      <div class="sidebar-menu">
+        <header class="logo">
+
+          <!--  <span id="logo" class="fa fa-codepen fa-2x"></span>-->
+
+            <img src="images/ICTG.PNG" class="img-responsive" width="220px" hight="150px"alt=""/>
+
+        </header>
+
+        <div style="border-top:1px solid rgba(69, 74, 84, 0.7)"></div>
+
+        <div class="menu">
+          <div class="menu">
+            <ul id="menu" >
+            <li><a href="index.html"><i class="fas fa-home"></i><span> Home</span></a></li>
+            <li><a href="table.html"><i class="fas fa-list"></i><span> Table of Contents</span></a></li>
+            <li><a href="dash.html"><i class="fas fa-table"></i><span> Dashboard</span></a></li>
+            <li><a href="comp.html"><i class="fas fa-user-friends"></i></i><span> My Company</span><span class="fa fa-angle-right" style="float: right"></span></a>
+                <ul>
+                    <li><a href="compI.html">Company Info</a></li>
+                    <li><a href="compA.html">Access Control</a></li>
+                    <li><a href="compT.html">Templates</a></li>
+                </ul>
+            </li>
+            <li><a href="service.html"><i class="fa fa-gears"></i><span> Service Catalog</span><span class="fa fa-angle-right" style="float: right"></span></a>
+                <ul>
+                  <li><a href="serviceT.html">Tariffs</a></li>
+                  <li><a href="serviceP.html">Bundles</a></li>
+                  <li><a href="serviceO.html">Products</a></li>
+                </ul>
+            </li>
+
+            <li><a href="sales.html"><i class="fas fa-chart-line"></i><span> Sales</span><span class="fa fa-angle-right" style="float: right"></span></a>
+                <ul>
+                    <li><a href="salesC.html">Customer Classes</a></li>
+                    <li><a href="salesD.html">Direct Customers</a></li>
+                    <li><a href="salesR.html">Reseller Creation</a></li>
+                    <li><a href="salesF.html">Fraud Prevention</a></li>
+                </ul>
+            </li>
+            <li><a href="infra.html"><i class="fas fa-network-wired"></i><span> Infrastructure</span><span class="fa fa-angle-right" style="float: right"></span></a>
+                <ul>
+                    <li><a href="infraV.html">Vendor Batches</a></li>
+                    <li><a href="infraP.html">Pricing Batches</a></li>
+                    <li><a href="infraDU.html">DID Upload</a></li>
+                    <li><a href="infraDL.html">DID List</a></li>
+                    <li><a href="infraDM.html">DID Management</a></li>
+
+                </ul>
+            </li>
+            <li><a href="voice.html"><i class="fas fa-phone-square"></i><span> Voice Services</span><span class="fa fa-angle-right" style="float: right"></span></a>
+                <ul>
+                    <li><a href="voiceSC.html">SIP Creation</a></li>
+                    <li><a href="voiceP.html">Product Selection</a></li>
+                    <li><a href="voiceSS.html">SIP Service Configuration</a></li>
+                    <li><a href="voiceI.html">IP Centrex</a></li>
+                </ul>
+            </li>
+            <li><a href="fin.html"><i class="fas fa-piggy-bank"></i><span> Financial</span><span class="fa fa-angle-right" style="float: right"></span></a>
+                <ul>
+                    <li><a href="finI.html">Invoicing</a></li>
+                    <li><a href="finB.html">Balance Adjustment</a></li>
+                    <li><a href="finX.html">xDRs</a></li>
+                    <li><a href="finR.html">XDR Re-Rating</a></li>
+                </ul>
+            </li>
+
+
+                <li><a href="index.html"><i class="fas fa-id-card"></i><span> Contact</span></a></li>
+        </ul>
+        </div>
+      </div>
+    </div>
+
+
+  </body>
+</html>
